@@ -43,14 +43,14 @@ class Cliente(ContaCorrente):
                 print("Seu saldo é ", self.saldo)
             else:
                 print(f"Saque de {valor} realizado com sucesso!")
-                self.saldo = self.saldo - valor
+                self.saldo -= valor
                 print("O saldo atual é ", self.saldo)
                 self.lista_operacoes.append(f"Saque de {valor}")
         else:
             print(f"{self.nome}, você não tem dinheiro depositado nessa conta.")
 
     def FazerDeposito(self, valor):
-        self.saldo = self.saldo + valor
+        self.saldo += valor
         print(f"Valor de {valor} depositado com sucesso!")
         print(f"Seu novo saldo é {self.saldo}.")
         self.lista_operacoes.append(f"Depósito de {valor}")
